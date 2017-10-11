@@ -216,4 +216,4 @@ pip-log.txt
 .mr.developer.cfg
 
 #Yii Database Config
-basic/config/db.php
+db.php
