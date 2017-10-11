@@ -1,3 +1,6 @@
+#Yii Database Config
+config/db.php
+
 # phpstorm project files
 .idea
 
