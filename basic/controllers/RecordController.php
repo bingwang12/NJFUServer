@@ -4,9 +4,14 @@ namespace app\controllers;
 
 class RecordController extends \yii\web\Controller
 {
-    public function actionRecord()
+    public function actionRecord($id,$time)
     {
-        return $this->render('record');
+		//echo "hello";
+		$request = \Yii::$app->request;
+		$id = $request->get("id"); 
+		$time = $request->get("time");
+		echo $id." ".$time;
+        //return $this->render('record');
     }
 
 }
