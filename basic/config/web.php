@@ -5,10 +5,18 @@ $db = require(__DIR__ . '/db.php');
 
 $config = [
     'id' => 'basic',
+    'defaultRoute'=>'index',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
-        'db' => $db,
+        // 'db' => [
+        // 'class' => 'yii\db\Connection',
+        // 'dsn' => 'mysql:host=localhost;dbname=yii2basic',
+        // 'username' => 'root',
+        // 'password' => 'p0P)o9O(i8I*',
+        // 'charset' => 'utf8',
+        // ],
+        'db' => $db,//数据库设置连接
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'DzGdA7FQxtUATtRj',
@@ -61,12 +69,12 @@ if (YII_ENV_DEV) {
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
 
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['*.*.*.*', '::1'],
-    ];
+    // $config['bootstrap'][] = 'gii';
+    // $config['modules']['gii'] = [
+    //     'class' => 'yii\gii\Module',
+    //     // uncomment the following to add your IP if you are not connecting from localhost.
+    //     'allowedIPs' => ['*.*.*.*', '::1'],
+    // ];
 }
 
 return $config;

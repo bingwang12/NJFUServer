@@ -19,14 +19,9 @@
 				<div id="large-header" class="large-header">
 					<canvas id="demo-canvas"></canvas>
 					<div class="logo_box">
-						<h3>欢迎你</h3>
-						<form action=".../controllers/UserController.php" name="f" method="post">
-							<div class="input_outer">
-								<span class="u_user"></span>
-								<input id="studentNumber" name="logname" class="text" style="color: #FFFFFF !important" type="text" placeholder="请输入学号">
-							</div>
-							<div class="mb2"><a id="login" class="act-but submit" href="http://120.27.122.238/NJFUTest/basic/web/index.php?r=user/user&id=" style="color: #FFFFFF" onclick="click()">查询</a></div>
-						</form>
+						<h3></h3>
+						<h3></h3>
+						<h3>你一共跑了：<?php echo $this->params['data']?>次</h3>	<!--拿到传过来的跑操次数 -->
 					</div>
 				</div>
 			</div>
@@ -35,10 +30,5 @@
 		<script src="<?php echo Yii::$app->request->baseUrl;?>/index/js/EasePack.min.js"></script>
 		<script src="<?php echo Yii::$app->request->baseUrl;?>/index/js/rAF.js"></script>
 		<script src="<?php echo Yii::$app->request->baseUrl;?>/index/js/demo-1.js"></script>
-		<script type="text/javascript">
-			document.getElementById("login").onclick=function(){
-				document.getElementById("login").href+=document.getElementById("studentNumber").value;
-		}//查询按钮的点击事件
-		</script>
 	</body>
 </html>
